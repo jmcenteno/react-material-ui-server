@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/rimraf dist/",
+    "build": "ls node_modules/.bin && ./node_modules/.bin/rimraf dist/",
     "start": "npm run build && node dist/index.js"
   },
   "author": "Jose Centeno",
