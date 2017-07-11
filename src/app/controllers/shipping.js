@@ -9,6 +9,8 @@ export async function GetShippingRates(req, res, next) {
 		
 	try {
 
+		console.log('BODY', req.body);
+
 		const { addressTo, parcels } = req.body;
 		const shipment = await ShippingService.createShipment(addressTo, parcels);
 		let groups;
@@ -17,9 +19,7 @@ export async function GetShippingRates(req, res, next) {
 		if (shipment.status == 'SUCCESS') {
 			
 			// return rates if shipment was created immediately
-			groups = groupRatesByProvider(shipment.rates);
-
-			res.json(groups);
+			res.json(shipment.rates);
 
 		} else {
 
@@ -30,9 +30,7 @@ export async function GetShippingRates(req, res, next) {
 
 						if (shipmentDetails.status == 'SUCCESS') {
 							
-							groups = groupRatesByProvider(shipmentDetails.rates);
 							clearInterval(t);
-
 							res.json(shipmentDetails.rates);
 							
 						}
@@ -58,10 +56,4 @@ export async function GetShippingRates(req, res, next) {
 
 	}
 
-}
-
-function groupRatesByProvider(rates) {
-	return _.groupBy(rates, (item) => {
-		return item.provider
-	});
 }
