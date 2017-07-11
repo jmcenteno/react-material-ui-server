@@ -1,6 +1,6 @@
 import shippo from 'shippo';
 
-import { API_TOKEN, SENDER_ADDRESS as addressFrom } from '../config/shippo';
+import { API_TOKEN, SENDER_ADDRESS as addressFrom } from '../../config/shippo';
 
 class ShippingService {
   
