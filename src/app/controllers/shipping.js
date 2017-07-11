@@ -1,7 +1,6 @@
 'use strict';
 
 import 'babel-polyfill';
-import _ from 'lodash';
 
 import ShippingService from '../services/shipping';
 
