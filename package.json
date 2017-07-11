@@ -1,0 +1,33 @@
+{
+  "name": "react-material-ui-server",
+  "version": "1.0.0",
+  "description": "API server for my app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node dist/index.js"
+  },
+  "author": "Jose Centeno",
+  "license": "ISC",
+  "dependencies": {
+    "authorizenet": "^1.0.3",
+    "body-parser": "^1.17.2",
+    "co-express": "^1.2.2",
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "lodash": "^4.17.4",
+    "morgan": "^1.8.2",
+    "shippo": "^1.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-regenerator": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^4.2.0",
+    "rimraf": "^2.6.1"
+  }
+}
