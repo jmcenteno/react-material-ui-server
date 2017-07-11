@@ -5,8 +5,8 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import cors from  'cors';
 
-import * as Middleware from './app/middleware';
-import Router from './app/routes';
+import * as Middleware from './middleware';
+import Router from './routes';
 
 const port = process.env.PORT || 4000;
 const app = express();
