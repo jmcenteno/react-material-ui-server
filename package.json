@@ -5,12 +5,13 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
-    "start": "npm run build && node dist/index.js"
+    "build": "rimraf dist/ && babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "node dist/index.js"
   },
   "author": "Jose Centeno",
   "license": "ISC",
   "dependencies": {
+    "authorizenet": "^1.0.3",
     "body-parser": "^1.17.2",
     "cors": "^2.8.3",
     "express": "^4.15.3",
