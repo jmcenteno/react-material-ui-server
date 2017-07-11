@@ -11,7 +11,6 @@
   "author": "Jose Centeno",
   "license": "ISC",
   "dependencies": {
-    "authorizenet": "^1.0.3",
     "body-parser": "^1.17.2",
     "cors": "^2.8.3",
     "express": "^4.15.3",
