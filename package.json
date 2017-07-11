@@ -2,10 +2,10 @@
   "name": "react-material-ui-server",
   "version": "1.0.0",
   "description": "API server for my app",
-  "main": "app/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist/ && babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "build": "./node_modules/.bin/rimraf dist/ && ./node_modules/.bin/babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "start": "npm run build && node dist/index.js"
   },
   "author": "Jose Centeno",
