@@ -2,7 +2,7 @@
   "name": "react-material-ui-server",
   "version": "1.0.0",
   "description": "API server for my app",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rimraf dist/ && babel ./src --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
@@ -13,7 +13,6 @@
   "dependencies": {
     "authorizenet": "^1.0.3",
     "body-parser": "^1.17.2",
-    "co-express": "^1.2.2",
     "cors": "^2.8.3",
     "express": "^4.15.3",
     "lodash": "^4.17.4",
